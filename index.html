@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +10,12 @@
   <style>
     /* Your existing styles */
 
+
     nav {
       background-color: #7EBBBB;
       color: white;
     }
+
 
     nav ul {
       list-style: none;
@@ -21,14 +24,17 @@
       padding: 10px 0;
     }
 
+
     nav a {
       text-decoration: none;
       color: white;
     }
 
+
     nav a:hover {
       text-decoration: underline;
     }
+
 
     /* Add responsive styles */
     @media screen and (max-width: 600px) {
@@ -36,25 +42,30 @@
         flex-direction: column;
       }
 
+
       nav li {
         margin-bottom: 10px;
       }
     }
+
 
     body {
       font-family: Arial, Helvetica, sans-serif;
       margin: 0;
     }
 
+
     html {
       box-sizing: border-box;
     }
+
 
     *,
     *:before,
     *:after {
       box-sizing: inherit;
     }
+
 
     .column {
       margin: 0 auto;
@@ -63,9 +74,11 @@
       padding: 8px;
     }
 
+
     .container {
       padding: 16px;
     }
+
 
     /* Add specific styles for the "professional" section */
     .professional-section {
@@ -75,10 +88,12 @@
       justify-content: space-between;
     }
 
+
     .professional-text {
       flex-basis: 60%;
       /* Adjust as needed */
     }
+
 
     .professional-image {
       flex-basis: 35%;
@@ -86,9 +101,11 @@
       text-align: right;
     }
 
+
     .title {
       color: grey;
     }
+
 
     .button {
       border: none;
@@ -102,9 +119,11 @@
       width: 100%;
     }
 
+
     .button:hover {
       background-color: #555;
     }
+
 
     /* Additional styles for the header */
     .header {
@@ -115,11 +134,13 @@
       /* Padding with 48px on the right */
     }
 
+
     .header h1 {
       font-family: 'Permanent Marker', cursive;
       color: black;
       margin: 0;
     }
+
 
     /* Add this CSS for the image animation */
     .heroImg img {
@@ -131,10 +152,12 @@
       /* Add a smooth transition effect */
     }
 
+
     .heroImg img:hover {
       transform: scale(1.1);
       /* Scale the image up by 10% on hover */
     }
+
 
     .heroImg img {
       width: 75%;
@@ -142,6 +165,7 @@
       display: block;
       margin: 0 auto;
     }
+
 
     /* Add these styles to match the box sizing */
     .skillContainer {
@@ -154,6 +178,7 @@
       border: 1px solid #ccc;
       /* Add borders or other styling as desired */
     }
+
 
     .skillContainer {
       max-width: 30%;
@@ -168,6 +193,7 @@
       /* Add transitions for transform and box-shadow */
     }
 
+
     /* Scale and add shadow on hover */
     .skillContainer:hover {
       transform: scale(1.05);
@@ -176,16 +202,39 @@
       /* Add a subtle shadow on hover */
     }
 
+
     /* Style for h1, h3, p, and img tags inside .skillContainer can be added here */
+
 
     .viewAllProjects {
       text-align: center;
       margin-top: 20px;
     }
+
+
+    /* Centered GIF container styles */
+    #gif-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      /* Ensure it's above the hero image */
+      display: none;
+      /* Initially hide it */
+    }
+
+
+    /* Adjust GIF width as needed */
+    #gif {
+      width: 100%;
+    }
   </style>
 </head>
 
+
 <body>
+
 
   <div class="header">
     <h1>I AM JARRETT</h1>
@@ -198,10 +247,10 @@
     </ul>
   </nav>
   <section class="heroImg">
-    <img
-      src="https://framerusercontent.com/modules/u8zRj1seATNPiCg5Jy77/XuocBI7tjvlsmIoEmpmF/assets/ggUfkh3CokdadYLoCsuhbtZLisw.png"
-      alt="No Parking">
+    <!-- Use a <video> element to display the GIF -->
+    <img src="Screenshot 2023-09-13 at 11.40.57 PM.png" alt="No Parking">
   </section>
+
 
   <div class="row">
     <div class="column">
@@ -229,168 +278,32 @@
       </div>
     </div>
   </div>
+
+
+  <!-- Add a container for the GIF with id "gif-container" -->
+  <div id="gif-container">
+    <!-- Use a <video> element to display the GIF -->
+    <img src="Portfolio.gif" alt="Your GIF" id="gif">
+  </div>
+
+
+  <!-- Include JavaScript to show the GIF after a delay -->
+  <script>
+    // Delay in milliseconds (1000 ms = 1 second)
+    const delay = 5000; // 5 seconds
+
+
+    // Function to show the GIF after the delay
+    function showGif() {
+      const gifContainer = document.getElementById('gif-container');
+      gifContainer.style.display = 'block'; // Show the container
+    }
+
+
+    // Set a timeout to call the showGif function after the delay
+    setTimeout(showGif, delay);
+  </script>
 </body>
 
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My UX Skills</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <style>
-    /* My UX Skills section coded using CSS flex */
-    .mySkills {
-      text-align: center;
-      margin: 20px;
-    }
-
-    .flexContainer {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .skillContainer {
-      max-width: 30%;
-      /* Adjust the width as needed */
-      height: 100%;
-      margin: 10px;
-      padding: 20px;
-      text-align: center;
-      border: 1px solid #ccc;
-      /* Add borders or other styling as desired */
-    }
-
-    /* Style for h1, h3, p, and img tags inside .skillContainer can be added here */
-
-    .viewAllProjects {
-      text-align: center;
-      margin-top: 20px;
-    }
-  </style>
-</head>
-
-<body>
-  <section class="mySkills">
-    <h1>My UX Skills</h1>
-    <div class="flexContainer">
-      <div class="skillContainer">
-        <img src="https://cdn-icons-png.flaticon.com/128/4599/4599811.png" alt="Skill 1 Icon">
-        <h3>User Research</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus sapien vel nunc consequat.</p>
-      </div>
-      <div class="skillContainer">
-        <img src="https://cdn-icons-png.flaticon.com/128/3939/3939992.png" alt="Skill 2 Icon">
-        <h3>User Interface Design</h3>
-        <p>Nulla facilisi. Curabitur at dapibus orci. Vivamus tincidunt nunc ut arcu tristique fermentum.</p>
-      </div>
-      <div class="skillContainer">
-        <img src="https://cdn-icons-png.flaticon.com/128/2010/2010990.png" alt="Skill 3 Icon">
-        <h3>Web Development</h3>
-        <p>Phasellus congue tellus eget neque varius, sit amet rhoncus nulla fringilla. This should stretch the
-          box</p>
-      </div>
-    </div>
-  </section>
-</body>
-
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Work</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <style>
-    /* My Work Section Constructed using CSS Grid */
-    .myWork {
-      text-align: center;
-      margin: 20px;
-    }
-
-    .workGrid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      /* Two columns */
-      grid-gap: 20px;
-      justify-content: center;
-      grid-template-areas:
-        "project1 project2"
-        "project3 project4";
-    }
-
-    .workItem {
-      text-align: center;
-      padding: 20px;
-      border: 1px solid #ccc;
-      /* Add borders or other styling as desired */
-    }
-
-    /* Apply named grid areas to your workItem divs */
-    .workItem:nth-child(1) {
-      grid-area: project1;
-    }
-
-    .workItem:nth-child(2) {
-      grid-area: project2;
-    }
-
-    .workItem:nth-child(3) {
-      grid-area: project3;
-    }
-
-    .workItem:nth-child(4) {
-      grid-area: project4;
-    }
-
-    /* Additional styling for h4, p, img, and button tags inside .workItem can be added here */
-
-    .viewAllProjects {
-      text-align: center;
-      margin-top: 20px;
-    }
-  </style>
-</head>
-
-<body>
-  <section class="myWork">
-    <h1>My Work</h1>
-    <div class="workGrid">
-      <div class="workItem">
-        <img src="project1.jpg" alt="Project 1">
-        <h4>Project 1</h4>
-        <p>Description of Project 1</p>
-        <button>View Project</button>
-      </div>
-      <div class="workItem">
-        <img src="project2.jpg" alt="Project 2">
-        <h4>Project 2</h4>
-        <p>Description of Project 2</p>
-        <button>View Project</button>
-      </div>
-      <div class="workItem">
-        <img src="project3.jpg" alt="Project 3">
-        <h4>Project 3</h4>
-        <p>Description of Project 3</p>
-        <button>View Project</button>
-      </div>
-      <div class="workItem">
-        <img src="project4.jpg" alt="Project 4">
-        <h4>Project 4</h4>
-        <p>Description of Project 4</p>
-        <button>View Project</button>
-      </div>
-    </div>
-    <h3 class="viewAllProjects">View all projects.</h3>
-  </section>
-</body>
 
 </html>
